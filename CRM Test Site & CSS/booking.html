@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Gusto CRM System | Glasgow Hotel</title>
+    <meta name="smartaddon-verification" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link href="/api/Attachment/getTenantImage?name=favicon.ico" rel="shortcut icon">
+    <link href="/api/Attachment/getTenantImage?name=favicon.ico" rel="bookmark">
+
+    <!-- Load Library -->
+    <link rel="stylesheet" href="/crm_dist/css/site.min.css?v=1PldsPjXmYjMbKz0G9RK39KDjBzeUM4wCYJkdjzBZ3o" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowreorder/1.2.5/css/rowReorder.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/site.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>(window.jQuery||document.write("\u003Cscript src=\u0022\/src\/lib\/jquery\/dist\/jquery.js\u0022\u003E\u003C\/script\u003E"));</script>
+    <script src="/crm_dist/js/site.lib.min.js?v=LjlSFNlHAayWHV07RLIWtbjRun-fzFQmL9spGSAnJ60"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script>(window.moment||document.write("\u003Cscript src=\u0022\/src\/lib\/moment\/moment.min.js\u0022\u003E\u003C\/script\u003E"));</script>
+    <script src="/lib/tinymce/js/tinymce/tinymce.min.js"></script>
+    <script src="https://cdn.datatables.net/rowreorder/1.2.5/js/dataTables.rowReorder.min.js"></script>
+    <script>
+        window.onpageshow = function (event) {
+            if (event.persisted) {
+                window.location.reload()
+            }
+        };
+
+        var data = '""';
+        if ('{"OutletCode":"GLASGOW","OutletName":"Glasgow Hotel","Address":"","Phone":"","Email":"","Website":"","OutletLogo":"download.png","LoginBackground":"login-bg-default.jpg","AppHeaderBackground":"app-header-bg-default.jpg","AppMainBackground":"app-main-bg-default.jpg","OutletTimezone":"Asia/Singapore","TimezoneValue":null,"OutletManagerSign":"manager-sign-default.png","GmName":"","ArrValue":1000000.0,"BirthdaySendTime":"08:00 AM","PostStaySendTime":"08:00 AM","CampaignSenderName":"Glasgow Hotel","CampaignSenderEmail":"ricky.pham@gustodian.com","CurrencySymbol":"Rp","FileOutletLogo":null,"FileLoginBg":null,"FileAppHeaderBg":null,"FileAppMainBg":null,"FileOutletManagerSign":null}' != '') {
+            data = '{"OutletCode":"GLASGOW","OutletName":"Glasgow Hotel","Address":"","Phone":"","Email":"","Website":"","OutletLogo":"download.png","LoginBackground":"login-bg-default.jpg","AppHeaderBackground":"app-header-bg-default.jpg","AppMainBackground":"app-main-bg-default.jpg","OutletTimezone":"Asia/Singapore","TimezoneValue":null,"OutletManagerSign":"manager-sign-default.png","GmName":"","ArrValue":1000000.0,"BirthdaySendTime":"08:00 AM","PostStaySendTime":"08:00 AM","CampaignSenderName":"Glasgow Hotel","CampaignSenderEmail":"ricky.pham@gustodian.com","CurrencySymbol":"Rp","FileOutletLogo":null,"FileLoginBg":null,"FileAppHeaderBg":null,"FileAppMainBg":null,"FileOutletManagerSign":null}';
+        }
+        var config = JSON.parse(data);
+
+        window.crmGlobalConfiguration = config;
+
+
+        var userClaimsRaw = '""';
+        if ('[{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier","Value":"16d903ae-87b7-4c3b-803c-fcc09ca2926e"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name","Value":"glasgow.uog"},{"Type":"AspNet.Identity.SecurityStamp","Value":"0fbe7e2b-9d7e-4b2c-97bf-025685f18bbd"},{"Type":"http://schemas.microsoft.com/ws/2008/06/identity/claims/role","Value":"Super User"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_GUEST_PROFILES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_GUEST_PROFILES:@_VIEW_GUEST_PROFILES_LIST"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_GUEST_PROFILES:@_CREATE_GUEST_PROFILES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_GUEST_PROFILES:@_MERGE_GUEST_PROFILES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_IMPORT_EXPORT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_IMPORT_EXPORT:@_IMPORT_GUEST_PROFILES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_IMPORT_EXPORT:@_IMPORT_GUEST_STAY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_IMPORT_EXPORT:@_EXPORT_GUEST_PROFILES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_IMPORT_EXPORT:@_EXPORT_GUEST_STAY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_EMAIL_MARKETING_MGNT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_EMAIL_MARKETING_MGNT:@_VIEW_CAMPAIGNS"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_EMAIL_MARKETING_MGNT:@_CREATE_NEW_CAMPAIGN"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_EMAIL_MARKETING_MGNT:@_POST_STAY_CONFIG"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_EMAIL_MARKETING_MGNT:@_BIRTHDAY_CONFIG"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_TEMPLATE_MGNT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_TEMPLATE_MGNT:@_MANAGE_TEMPLATES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_TEMPLATE_MGNT:@_CREATE_NEW_TEMPLATE"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_MARKETING_CAMPAIGN"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_MARKETING_CAMPAIGN:@_CAMPAIGN_DETAILS_REPORT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_MARKETING_CAMPAIGN:@_POST_STAY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_MARKETING_CAMPAIGN:@_BIRTHDAY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_GUEST_PROFILE"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_GUEST_PROFILE:@_GUEST_PROFILE_LIST"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_USAGE"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_USAGE:@_EMAIL_USAGE"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_ACTIVE_REPORT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_ACTIVE_REPORT:@_ACTIVE_REPORT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_SURVEY_REPORT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_SURVEY_REPORT:@_POST_STAY_SURVEY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CONFIGURATION"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CONFIGURATION:@_SYSTEM_CONFIGURATION"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CONFIGURATION:@_EMAIL_QUOTA_VIEW"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CONFIGURATION:@_UPLOAD_FILE_TEMPLATES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_USER_USER_GROUP_MNGT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_USER_USER_GROUP_MNGT:@_MANAGE_USERS"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_USER_USER_GROUP_MNGT:@_MANAGE_USER_GROUPS"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_BLACKLIST_MNGT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_BLACKLIST_MNGT:@_MANAGE_BLACKLIST"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CAMPAIGN_MNGT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CAMPAIGN_MNGT:@_MANAGE_CAMPAIGNS"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CAMPAIGN_ARCHIVE"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CAMPAIGN_ARCHIVE:@_ARCHIVED_CAMPAIGNS"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_SURVEY_MNGT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_SURVEY_MNGT:@_MANAGE_CATEGORY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_SURVEY_MNGT:@_MANAGE_INTRO"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_SURVEY_MNGT:@_PREVIEW_SURVEY"}]' != '') {
+            userClaimsRaw = '[{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier","Value":"16d903ae-87b7-4c3b-803c-fcc09ca2926e"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name","Value":"glasgow.uog"},{"Type":"AspNet.Identity.SecurityStamp","Value":"0fbe7e2b-9d7e-4b2c-97bf-025685f18bbd"},{"Type":"http://schemas.microsoft.com/ws/2008/06/identity/claims/role","Value":"Super User"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_GUEST_PROFILES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_GUEST_PROFILES:@_VIEW_GUEST_PROFILES_LIST"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_GUEST_PROFILES:@_CREATE_GUEST_PROFILES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_GUEST_PROFILES:@_MERGE_GUEST_PROFILES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_IMPORT_EXPORT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_IMPORT_EXPORT:@_IMPORT_GUEST_PROFILES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_IMPORT_EXPORT:@_IMPORT_GUEST_STAY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_IMPORT_EXPORT:@_EXPORT_GUEST_PROFILES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_IMPORT_EXPORT:@_EXPORT_GUEST_STAY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_EMAIL_MARKETING_MGNT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_EMAIL_MARKETING_MGNT:@_VIEW_CAMPAIGNS"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_EMAIL_MARKETING_MGNT:@_CREATE_NEW_CAMPAIGN"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_EMAIL_MARKETING_MGNT:@_POST_STAY_CONFIG"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_EMAIL_MARKETING_MGNT:@_BIRTHDAY_CONFIG"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_TEMPLATE_MGNT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_TEMPLATE_MGNT:@_MANAGE_TEMPLATES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_TEMPLATE_MGNT:@_CREATE_NEW_TEMPLATE"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_MARKETING_CAMPAIGN"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_MARKETING_CAMPAIGN:@_CAMPAIGN_DETAILS_REPORT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_MARKETING_CAMPAIGN:@_POST_STAY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_MARKETING_CAMPAIGN:@_BIRTHDAY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_GUEST_PROFILE"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_GUEST_PROFILE:@_GUEST_PROFILE_LIST"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_USAGE"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_USAGE:@_EMAIL_USAGE"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_ACTIVE_REPORT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_ACTIVE_REPORT:@_ACTIVE_REPORT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_SURVEY_REPORT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_SURVEY_REPORT:@_POST_STAY_SURVEY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CONFIGURATION"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CONFIGURATION:@_SYSTEM_CONFIGURATION"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CONFIGURATION:@_EMAIL_QUOTA_VIEW"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CONFIGURATION:@_UPLOAD_FILE_TEMPLATES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_USER_USER_GROUP_MNGT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_USER_USER_GROUP_MNGT:@_MANAGE_USERS"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_USER_USER_GROUP_MNGT:@_MANAGE_USER_GROUPS"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_BLACKLIST_MNGT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_BLACKLIST_MNGT:@_MANAGE_BLACKLIST"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CAMPAIGN_MNGT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CAMPAIGN_MNGT:@_MANAGE_CAMPAIGNS"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CAMPAIGN_ARCHIVE"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CAMPAIGN_ARCHIVE:@_ARCHIVED_CAMPAIGNS"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_SURVEY_MNGT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_SURVEY_MNGT:@_MANAGE_CATEGORY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_SURVEY_MNGT:@_MANAGE_INTRO"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_SURVEY_MNGT:@_PREVIEW_SURVEY"}]';
+        }
+        var userClaims = JSON.parse(userClaimsRaw);
+
+        window.crmUserClaims = userClaims;
+        window.crmUserID = '16d903ae-87b7-4c3b-803c-fcc09ca2926e';
+        window.crmUserCreatedBy = '-1';
+        window.crmUserCreatedDateTime = '10/24/2018 7:18:08 AM';
+        window.crmUserLockoutEnabled = 'True';
+
+        window.isExpired = '';
+        if (window.isExpired == 'Expired') {
+            window.location.href = '/Admin/List/#/UserExpiry/' + window.crmUserID;
+        }
+    </script>
+    </head>
+    <body>
+<div id="page" class="container"> 
+      <!-- HEADER -->
+      <div id="header">
+    <div id="topbar" class="clearfix row">
+          <div id="topbar-left">
+        <div id="logo-panel"> <a href="/"><img src="/api/Attachment/getLogoImage" style="max-height: 110px;"></a> </div>
+      </div>
+          <div id="topbar-right" style="background-image: url('/api/Attachment/getTenantImage?name=trans-white-75.png')">
+        <div id="brand-logo-placeholder"> <img src="/api/Attachment/getTenantImage?name=logo-crm.png"> </div>
+        <div id="outlet-date-placeholder">
+            <span id="outlet-date-day" title="Wednesday, 14 November 2018">14</span>
+            <span id="outlet-date-month">Nov</span>
+        </div>
+        <div class="dropdown"> <a id="outlet-name-placeholder" class="dropdown-toggle"> <span id="outlet-name">Glasgow Hotel</span> </a> <a onclick="getToken()" href="#" style="margin-left:10px"> <i class="glyphicon glyphicon-question-circle" aria-hidden="true" style="font-size:16px"></i> </a> </div>
+        <div id="user-header">
+              <button id="btn_profileMenu" class="btn btn-link"> Glasgow Demo <i class="glyphicon glyphicon-fw glyphicon-caret-down"></i> </button>
+              <div id="dd_profileMenu"> <img src="/api/Attachment/getTenantImage?name=default_profile.png" class="img-thumbnail" style="width: 100px;"> <span>Glasgow Demo</span> <span></span> <br>
+            <hr>
+            <a class="btn btn-success btn-block" href="/Me">My Profile</a> <a onclick="localStorage.clear();" class="btn btn-success btn-block" href="/Account/Logout">Log Out</a> </div>
+            </div>
+      </div>
+        </div>
+    <div id="newsTicker-placeholder" class="row">
+          <ul id="newsTicker" class="col-xs-12 newsticker hidden">
+      </ul>
+        </div>
+    <div class="row">
+          <div id="gusto-navbar" class="navbar yamm">
+        <ul class="nav nav-justified" id="myNav">
+              <li class="dropdown yamm-fw"> <a href="javascript:void(0)" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false"> &nbsp;
+                Guest Profiles<b class="caret"></b> </a>
+            <ul class="dropdown-menu">
+                  <li class="grid-content">
+                <div class="menu row">
+                      <div class="col-menu menu-group">
+                    <div class="nav-group"> <span class="nav-subhead">Guest Profiles</span>
+                          <ul class="glyphicon-ul">
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Guest/List/#/">View Guest Profiles List</a> </li>
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Guest/List/#/create-new">Create New Guest Profile</a> </li>
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Guest/List/#/merge">Merge Guests</a> </li>
+                      </ul>
+                        </div>
+                  </div>
+                      <div class="col-menu menu-group">
+                    <div class="nav-group"> <span class="nav-subhead">Import / Export</span>
+                          <ul class="glyphicon-ul">
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Data/#/import-guest">Import Guest Profiles</a> </li>
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Data/#/import-stay">Import Guest Stay</a> </li>
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Data/#/export-guest">Export Guest Profiles</a> </li>
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Data/#/export-stay">Export Guest Stay</a> </li>
+                      </ul>
+                        </div>
+                  </div>
+                    </div>
+              </li>
+                </ul>
+          </li>
+              <li class="dropdown yamm-fw"> <a href="javascript:void(0)" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false"> &nbsp;
+                Email Marketing<b class="caret"></b> </a>
+            <ul class="dropdown-menu">
+                  <li class="grid-content">
+                <div class="menu row">
+                      <div class="col-menu menu-group">
+                    <div class="nav-group"> <span class="nav-subhead">Email Marketing Management</span>
+                          <ul class="glyphicon-ul">
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Campaign/List/#/">View Campaigns</a> </li>
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Campaign/List/#/create">New Campaign</a> </li>
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Campaign/List/#/post-stay">Post-Stay Configuration</a> </li>
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Campaign/Birthday">Birthday Configuration</a> </li>
+                      </ul>
+                        </div>
+                  </div>
+                      <div class="col-menu menu-group">
+                    <div class="nav-group"> <span class="nav-subhead">Template Management</span>
+                          <ul class="glyphicon-ul">
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Template/List#/">Manage Templates</a> </li>
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Template/List/#/create-new">Create New Template</a> </li>
+                      </ul>
+                        </div>
+                  </div>
+                    </div>
+              </li>
+                </ul>
+          </li>
+              <li class="dropdown yamm-fw"> <a href="javascript:void(0)" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false"> &nbsp;
+                Report<b class="caret"></b> </a>
+            <ul class="dropdown-menu">
+                  <li class="grid-content">
+                <div class="menu row">
+                      <div class="col-menu menu-group">
+                    <div class="nav-group"> <span class="nav-subhead">Email Marketing Campaign</span>
+                          <ul class="glyphicon-ul">
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Report/#/campaignmonthlyreport">Campaign Details Report</a> </li>
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Report/#/poststayreport">Post-Stay Report</a> </li>
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Report/#/birthdayreport">Birthday Report</a> </li>
+                      </ul>
+                        </div>
+                  </div>
+                      <div class="col-menu menu-group">
+                    <div class="nav-group"> <span class="nav-subhead">Guest Profile</span>
+                          <ul class="glyphicon-ul">
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Guest/List/#/report">Guest Profile Report</a> </li>
+                      </ul>
+                        </div>
+                  </div>
+                      <div class="col-menu menu-group">
+                    <div class="nav-group"> <span class="nav-subhead">Email Usage</span>
+                          <ul class="glyphicon-ul">
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Report/#/emailusagemonthlyreport">Email Usage Report</a> </li>
+                      </ul>
+                        </div>
+                  </div>
+                      <div class="col-menu menu-group">
+                    <div class="nav-group"> <span class="nav-subhead">Status Report</span>
+                          <ul class="glyphicon-ul">
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Report/#/statusreport">Status Report</a> </li>
+                      </ul>
+                        </div>
+                  </div>
+                      <div class="col-menu menu-group">
+                    <div class="nav-group"> <span class="nav-subhead">Survey Report</span>
+                          <ul class="glyphicon-ul">
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Report/#/surveyreport">Post-Stay Survey Report</a> </li>
+                      </ul>
+                        </div>
+                  </div>
+                    </div>
+              </li>
+                </ul>
+          </li>
+              <li class="dropdown yamm-fw"> <a href="javascript:void(0)" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false"> &nbsp;
+                Administration<b class="caret"></b> </a>
+            <ul class="dropdown-menu">
+                  <li class="grid-content">
+                <div class="menu row">
+                      <div class="col-menu menu-group">
+                    <div class="nav-group"> <span class="nav-subhead">Configuration</span>
+                          <ul class="glyphicon-ul">
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Admin/List/#/">System Configuration</a> </li>
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Admin/List/#/quota">Email Quota</a> </li>
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Admin/List/#/uploadfiletemplates">Upload File Formats</a> </li>
+                      </ul>
+                        </div>
+                  </div>
+                      <div class="col-menu menu-group">
+                    <div class="nav-group"> <span class="nav-subhead">User &amp; User Group Management</span>
+                          <ul class="glyphicon-ul">
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Admin/List/#/usermanage">Manage Users</a> </li>
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Admin/List/#/usergroupmanage">Manage User Groups</a> </li>
+                      </ul>
+                        </div>
+                  </div>
+                      <div class="col-menu menu-group">
+                    <div class="nav-group"> <span class="nav-subhead">Blacklist Management</span>
+                          <ul class="glyphicon-ul">
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Admin/List/#/blacklistmanage">Manage Blacklist</a> </li>
+                      </ul>
+                        </div>
+                  </div>
+                      <div class="col-menu menu-group">
+                    <div class="nav-group"> <span class="nav-subhead">Campaign Archive</span>
+                          <ul class="glyphicon-ul">
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Admin/List/#/campaignsarchive">Archived Campaigns</a> </li>
+                      </ul>
+                        </div>
+                  </div>
+                      <div class="col-menu menu-group">
+                    <div class="nav-group"> <span class="nav-subhead">Survey Management</span>
+                          <ul class="glyphicon-ul">
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Admin/List/#/surveycategorymanage">Comment Form Setup</a> </li>
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Admin/List/#/surveyintromanage">Introduction Message</a> </li>
+                        <li> <i class="glyphicon-li glyphicon glyphicon-caret-right"></i> <a href="/Admin/List/#/surveypreview">Preview Comment Form</a> </li>
+                      </ul>
+                        </div>
+                  </div>
+                    </div>
+              </li>
+                </ul>
+          </li>
+            </ul>
+      </div>
+        </div>
+  </div>
+      <!-- e.o HEADER--> 
+      <!-- CONTENT -->
+      <div id="main-container" class="row">
+    <style>
+    #printOnly {
+        display: none;
+    }
+
+    @media print {
+        #printOnly {
+            display: block;
+        }
+
+        .bottom {
+            display: none !important;
+        }
+    }
+</style>
+    <div id="container"> </div>
+    <script src="/crm_dist/js/commons.chunk.bundle.js?v=xUII960vFsQmqM78DMaqLVj3E1RfN9dvCfmeaiQe6iA"></script> 
+    <script src="/crm_dist/js/guestProfiles.bundle.js?v=Ru1pc8HtIPwHY7BywMUj-d0R-hdXFDMC98tWgFNHWkw"></script>
+    <div class="col-md-12">
+          <h3 id="pageTitle">Booking List</h3>
+          <div>
+        <ol class="breadcrumb">
+              <li><a><i class="fa fa-home"></i><!-- react-text: 11 -->Booking Management<!-- /react-text --></a></li>
+              <li class="active">Booking List</li>
+            </ol>
+      </div>
+          <div>
+        <div class="inhouse-list-main-placeholder">
+              <div class="col-md-12">
+            <div class="pull-left"><a class="btn btn-success btn-sm" href="#/create-new"><i class="glyphicon glyphicon-plus-circle m-right-10"></i><!-- react-text: 19 -->Create New Booking<!-- /react-text --></a></div>
+            <div class="clearfix"></div>
+            <div class="m-top-15 form-inline">
+                  <table>
+                <tr>
+                      <td><div class="form-group">
+                          <input type="text" class="form-control input-sm" placeholder="Seach for guest unique identifier, guest name, email address" name="guestDataTableSearchKeyword" value="" style="width: 400px;">
+                        </div></td>
+                      <td><div class="form-group m-left-15">
+                          <input type="checkbox" name="hideGuestWithoutStay" value="on">
+                          <!-- react-text: 26 -->&nbsp;<!-- /react-text -->
+                          <label for="checkbox-hide-system-post" style="margin-bottom: 0px;"><strong>Hide guest with 0 stay</strong></label>
+                        </div></td>
+                      <td><div class="form-group m-left-15">
+                          <input type="checkbox" name="showEmail" value="on">
+                          <!-- react-text: 31 -->&nbsp;<!-- /react-text -->
+                          <label for="checkbox-hide-system-post" style="margin-bottom: 0px;"><strong>Show guest with email address</strong></label>
+                        </div></td>
+                      <td><a class="btn btn-sm btn-success m-top-10 m-left-15 m-bottom-5"><i class="glyphicon glyphicon-search"></i><!-- react-text: 36 -->&nbsp;Search<!-- /react-text --></a></td>
+                    </tr>
+              </table>
+                </div>
+            <div>
+                  <div id="guestProfileListDataTable_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                <div class="top"></div>
+                <table id="guestProfileListDataTable" class="table table-bordered table-condensed table-striped dataTable no-footer" role="grid">
+                      <thead>
+                    <tr role="row">
+                          <th class="text-center valign-middle sorting" tabindex="0" aria-controls="guestProfileListDataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Guest ID: activate to sort column descending" style="width: 100px;">Booking ID</th>
+                          <th class="text-center valign-middle sorting" tabindex="0" aria-controls="guestProfileListDataTable" rowspan="1" colspan="1" aria-label="Full Name: activate to sort column ascending" style="width: 150px;">Full Name</th>
+                          <th class="text-center valign-middle sorting" tabindex="0" aria-controls="guestProfileListDataTable" rowspan="1" colspan="1" aria-label="Birthday: activate to sort column ascending" style="width: 60px;">Check In</th>
+                          <th class="text-center valign-middle sorting" tabindex="0" aria-controls="guestProfileListDataTable" rowspan="1" colspan="1" aria-label="Birthday: activate to sort column ascending" style="width: 60px;">Check Out</th>
+                          <th class="text-center valign-middle sorting" tabindex="0" aria-controls="guestProfileListDataTable" rowspan="1" colspan="1" aria-label="City: activate to sort column ascending">City</th>
+                          <th class="text-center valign-middle sorting" tabindex="0" aria-controls="guestProfileListDataTable" rowspan="1" colspan="1" aria-label="Country: activate to sort column ascending">Country</th>
+                          <th class="text-center valign-middle sorting" tabindex="0" aria-controls="guestProfileListDataTable" rowspan="1" colspan="1" aria-label="Total Stays: activate to sort column ascending" style="width: 50px;">Total Stays</th>
+                          <th class="text-center valign-middle sorting" tabindex="0" aria-controls="guestProfileListDataTable" rowspan="1" colspan="1" aria-label="Last Stay: activate to sort column ascending" style="width: 60px;">Last Stay</th>
+                          <th class="text-center valign-middle sorting" tabindex="0" aria-controls="guestProfileListDataTable" rowspan="1" colspan="1" aria-label="Total Spending (Rp): activate to sort column ascending" style="width: 80px;">Total Spending (Rp)</th>
+                          <th class="text-center valign-middle sorting" tabindex="0" aria-controls="guestProfileListDataTable" rowspan="1" colspan="1" aria-label="Email Address: activate to sort column ascending">Email Address</th>
+                          <th class="text-center valign-middle sorting_disabled" rowspan="1" colspan="1" aria-label="Action" style="width: 90px;">Action</th>
+                        </tr>
+                  </thead>
+                      <tbody>
+                    <tr role="row" class="odd">
+                          <td class="text-center valign-middle sorting_1"><div class="text-left"><span title="1061">0000002</span></div></td>
+                          <td class=" text-center valign-middle">Gerlach Rafael <span style="color:#049372"><i style="font-size:70%" class="glyphicon glyphicon-plus"></i></span></td>
+                          <td class=" text-center valign-middle">11-Jan-1973</td>
+                          <td class=" text-center valign-middle"><div class="valign-middle">55</div></td>
+                          <td class=" text-center valign-middle">Monroeshire</td>
+                          <td class=" text-center valign-middle">Mauritius</td>
+                          <td class=" text-center valign-middle">3</td>
+                          <td class=" text-center valign-middle">27-Jun-2018</td>
+                          <td class=" text-center valign-middle"><div class="text-right">13,780,195</div></td>
+                          <td class=" text-center valign-middle"><div class="text-left"><a href="mailto:Rafael_Gerlach66@gustodian.com">Rafael_Gerlach66@gustodian.com</a></div></td>
+                          <td class=" text-center valign-middle"><a class="btn btn-xs btn-info btnAction" title="Details" href="#/edit/2"> <i class="glyphicon glyphicon-fw glyphicon-pencil"></i> </a> <a class="btn btn-xs btn-primary btnAction btnAction-details" title="Add Guest Stay" href="#/new-reservation/2"> <i class="glyphicon glyphicon-fw glyphicon-bed"></i> </a> <a class="btn btn-xs btn-warning btnAction" title="Delete" data-id="2"> <i class="glyphicon glyphicon-fw glyphicon-trash"></i> </a></td>
+                        </tr>
+                    <tr role="row" class="even">
+                          <td class="text-center valign-middle sorting_1"><div class="text-left"><span title="1706">0000003</span></div></td>
+                          <td class=" text-center valign-middle">King Ted <span style="color:#049372"><i style="font-size:70%" class="glyphicon glyphicon-plus"></i></span></td>
+                          <td class=" text-center valign-middle">25-Jan-1973</td>
+                          <td class=" text-center valign-middle"><div class="valign-middle">59</div></td>
+                          <td class=" text-center valign-middle">Ricestad</td>
+                          <td class=" text-center valign-middle">Grenada</td>
+                          <td class=" text-center valign-middle">3</td>
+                          <td class=" text-center valign-middle">28-Jul-2018</td>
+                          <td class=" text-center valign-middle"><div class="text-right">17,390,325</div></td>
+                          <td class=" text-center valign-middle"><div class="text-left"><a href="mailto:Ted_King90@gustodian.com">Ted_King90@gustodian.com</a></div></td>
+                          <td class=" text-center valign-middle"><a class="btn btn-xs btn-info btnAction" title="Details" href="#/edit/3"> <i class="glyphicon glyphicon-fw glyphicon-pencil"></i> </a> <a class="btn btn-xs btn-primary btnAction btnAction-details" title="Add Guest Stay" href="#/new-reservation/3"> <i class="glyphicon glyphicon-fw glyphicon-bed"></i> </a> <a class="btn btn-xs btn-warning btnAction" title="Delete" data-id="3"> <i class="glyphicon glyphicon-fw glyphicon-trash"></i> </a></td>
+                        </tr>
+                    <tr role="row" class="odd">
+                          <td class="text-center valign-middle sorting_1"><div class="text-left"><span title="1723">0000004</span></div></td>
+                          <td class=" text-center valign-middle">Hilll Tyrone <span style="color:#049372"><i style="font-size:70%" class="glyphicon glyphicon-plus"></i></span></td>
+                          <td class=" text-center valign-middle">11-Jun-1962</td>
+                          <td class=" text-center valign-middle"><div class="valign-middle">0</div></td>
+                          <td class=" text-center valign-middle">Schmelerton</td>
+                          <td class=" text-center valign-middle">Dominica</td>
+                          <td class=" text-center valign-middle">0</td>
+                          <td class=" text-center valign-middle"></td>
+                          <td class=" text-center valign-middle"><div class="text-right">0</div></td>
+                          <td class=" text-center valign-middle"><div class="text-left"><a href="mailto:Tyrone8@gustodian.com">Tyrone8@gustodian.com</a></div></td>
+                          <td class=" text-center valign-middle"><a class="btn btn-xs btn-info btnAction" title="Details" href="#/edit/4"> <i class="glyphicon glyphicon-fw glyphicon-pencil"></i> </a> <a class="btn btn-xs btn-primary btnAction btnAction-details" title="Add Guest Stay" href="#/new-reservation/4"> <i class="glyphicon glyphicon-fw glyphicon-bed"></i> </a> <a class="btn btn-xs btn-warning btnAction" title="Delete" data-id="4"> <i class="glyphicon glyphicon-fw glyphicon-trash"></i> </a></td>
+                        </tr>
+                    <tr role="row" class="even">
+                          <td class="text-center valign-middle sorting_1"><div class="text-left"><span title="2229">0000005</span></div></td>
+                          <td class=" text-center valign-middle">Franecki Terence <span style="color:#049372"><i style="font-size:70%" class="glyphicon glyphicon-plus"></i></span></td>
+                          <td class=" text-center valign-middle">05-Feb-1972</td>
+                          <td class=" text-center valign-middle"><div class="valign-middle">36</div></td>
+                          <td class=" text-center valign-middle">Schulistfort</td>
+                          <td class=" text-center valign-middle">Ireland</td>
+                          <td class=" text-center valign-middle">1</td>
+                          <td class=" text-center valign-middle">16-Jun-2018</td>
+                          <td class=" text-center valign-middle"><div class="text-right">6,299,155</div></td>
+                          <td class=" text-center valign-middle"><div class="text-left"><a href="mailto:Terence29@gustodian.com">Terence29@gustodian.com</a></div></td>
+                          <td class=" text-center valign-middle"><a class="btn btn-xs btn-info btnAction" title="Details" href="#/edit/5"> <i class="glyphicon glyphicon-fw glyphicon-pencil"></i> </a> <a class="btn btn-xs btn-primary btnAction btnAction-details" title="Add Guest Stay" href="#/new-reservation/5"> <i class="glyphicon glyphicon-fw glyphicon-bed"></i> </a> <a class="btn btn-xs btn-warning btnAction" title="Delete" data-id="5"> <i class="glyphicon glyphicon-fw glyphicon-trash"></i> </a></td>
+                        </tr>
+                    <tr role="row" class="odd">
+                          <td class="text-center valign-middle sorting_1"><div class="text-left"><span title="3341">0000006</span></div></td>
+                          <td class=" text-center valign-middle">Cronin Marion <span style="color:#049372"><i style="font-size:70%" class="glyphicon glyphicon-plus"></i></span></td>
+                          <td class=" text-center valign-middle">14-Nov-1967</td>
+                          <td class=" text-center valign-middle"><div class="valign-middle">43</div></td>
+                          <td class=" text-center valign-middle">North Claudeside</td>
+                          <td class=" text-center valign-middle">Swaziland</td>
+                          <td class=" text-center valign-middle">1</td>
+                          <td class=" text-center valign-middle">19-Jun-2018</td>
+                          <td class=" text-center valign-middle"><div class="text-right">10,523,705</div></td>
+                          <td class=" text-center valign-middle"><div class="text-left"><a href="mailto:Marion95@gustodian.com">Marion95@gustodian.com</a></div></td>
+                          <td class=" text-center valign-middle"><a class="btn btn-xs btn-info btnAction" title="Details" href="#/edit/6"> <i class="glyphicon glyphicon-fw glyphicon-pencil"></i> </a> <a class="btn btn-xs btn-primary btnAction btnAction-details" title="Add Guest Stay" href="#/new-reservation/6"> <i class="glyphicon glyphicon-fw glyphicon-bed"></i> </a> <a class="btn btn-xs btn-warning btnAction" title="Delete" data-id="6"> <i class="glyphicon glyphicon-fw glyphicon-trash"></i> </a></td>
+                        </tr>
+                    <tr role="row" class="even">
+                          <td class="text-center valign-middle sorting_1"><div class="text-left"><span title="4449">0000007</span></div></td>
+                          <td class=" text-center valign-middle">Schmitt Alyssa <span style="color:#049372"><i style="font-size:70%" class="glyphicon glyphicon-plus"></i></span></td>
+                          <td class=" text-center valign-middle">30-Dec-1977</td>
+                          <td class=" text-center valign-middle"><div class="valign-middle">33</div></td>
+                          <td class=" text-center valign-middle">South Sonya</td>
+                          <td class=" text-center valign-middle">Sint Maarten</td>
+                          <td class=" text-center valign-middle">1</td>
+                          <td class=" text-center valign-middle">29-May-2018</td>
+                          <td class=" text-center valign-middle"><div class="text-right">6,000,000</div></td>
+                          <td class=" text-center valign-middle"><div class="text-left"><a href="mailto:Alyssa_Schmitt0@gustodian.com">Alyssa_Schmitt0@gustodian.com</a></div></td>
+                          <td class=" text-center valign-middle"><a class="btn btn-xs btn-info btnAction" title="Details" href="#/edit/7"> <i class="glyphicon glyphicon-fw glyphicon-pencil"></i> </a> <a class="btn btn-xs btn-primary btnAction btnAction-details" title="Add Guest Stay" href="#/new-reservation/7"> <i class="glyphicon glyphicon-fw glyphicon-bed"></i> </a> <a class="btn btn-xs btn-warning btnAction" title="Delete" data-id="7"> <i class="glyphicon glyphicon-fw glyphicon-trash"></i> </a></td>
+                        </tr>
+                    <tr role="row" class="odd">
+                          <td class="text-center valign-middle sorting_1"><div class="text-left"><span title="4799">0000008</span></div></td>
+                          <td class=" text-center valign-middle">Mohr Neil <span style="color:#049372"><i style="font-size:70%" class="glyphicon glyphicon-plus"></i></span></td>
+                          <td class=" text-center valign-middle">31-Mar-1982</td>
+                          <td class=" text-center valign-middle"><div class="valign-middle">0</div></td>
+                          <td class=" text-center valign-middle">Dalemouth</td>
+                          <td class=" text-center valign-middle">Niger</td>
+                          <td class=" text-center valign-middle">0</td>
+                          <td class=" text-center valign-middle"></td>
+                          <td class=" text-center valign-middle"><div class="text-right">0</div></td>
+                          <td class=" text-center valign-middle"><div class="text-left"><a href="mailto:Neil_Mohr40@gustodian.com">Neil_Mohr40@gustodian.com</a></div></td>
+                          <td class=" text-center valign-middle"><a class="btn btn-xs btn-info btnAction" title="Details" href="#/edit/8"> <i class="glyphicon glyphicon-fw glyphicon-pencil"></i> </a> <a class="btn btn-xs btn-primary btnAction btnAction-details" title="Add Guest Stay" href="#/new-reservation/8"> <i class="glyphicon glyphicon-fw glyphicon-bed"></i> </a> <a class="btn btn-xs btn-warning btnAction" title="Delete" data-id="8"> <i class="glyphicon glyphicon-fw glyphicon-trash"></i> </a></td>
+                        </tr>
+                    <tr role="row" class="even">
+                          <td class="text-center valign-middle sorting_1"><div class="text-left"><span title="5140">0000009</span></div></td>
+                          <td class=" text-center valign-middle">Herzog Michelle <span style="color:#049372"><i style="font-size:70%" class="glyphicon glyphicon-plus"></i></span></td>
+                          <td class=" text-center valign-middle">28-Jul-1967</td>
+                          <td class=" text-center valign-middle"><div class="valign-middle">38</div></td>
+                          <td class=" text-center valign-middle">West Jaylonmouth</td>
+                          <td class=" text-center valign-middle">Saint Martin</td>
+                          <td class=" text-center valign-middle">1</td>
+                          <td class=" text-center valign-middle">17-Jul-2018</td>
+                          <td class=" text-center valign-middle"><div class="text-right">6,735,960</div></td>
+                          <td class=" text-center valign-middle"><div class="text-left"><a href="mailto:Michelle.Herzog@gustodian.com">Michelle.Herzog@gustodian.com</a></div></td>
+                          <td class=" text-center valign-middle"><a class="btn btn-xs btn-info btnAction" title="Details" href="#/edit/9"> <i class="glyphicon glyphicon-fw glyphicon-pencil"></i> </a> <a class="btn btn-xs btn-primary btnAction btnAction-details" title="Add Guest Stay" href="#/new-reservation/9"> <i class="glyphicon glyphicon-fw glyphicon-bed"></i> </a> <a class="btn btn-xs btn-warning btnAction" title="Delete" data-id="9"> <i class="glyphicon glyphicon-fw glyphicon-trash"></i> </a></td>
+                        </tr>
+                    <tr role="row" class="odd">
+                          <td class="text-center valign-middle sorting_1"><div class="text-left"><span title="6018">0000011</span></div></td>
+                          <td class=" text-center valign-middle">Mayer Vivian <span style="color:#049372"><i style="font-size:70%" class="glyphicon glyphicon-plus"></i></span></td>
+                          <td class=" text-center valign-middle">04-Jan-1975</td>
+                          <td class=" text-center valign-middle"><div class="valign-middle">80</div></td>
+                          <td class=" text-center valign-middle">Keenanbury</td>
+                          <td class=" text-center valign-middle">Libya</td>
+                          <td class=" text-center valign-middle">1</td>
+                          <td class=" text-center valign-middle">12-Jun-2018</td>
+                          <td class=" text-center valign-middle"><div class="text-right">57,971,950</div></td>
+                          <td class=" text-center valign-middle"><div class="text-left"><a href="mailto:Vivian.Mayer26@gustodian.com">Vivian.Mayer26@gustodian.com</a></div></td>
+                          <td class=" text-center valign-middle"><a class="btn btn-xs btn-info btnAction" title="Details" href="#/edit/11"> <i class="glyphicon glyphicon-fw glyphicon-pencil"></i> </a> <a class="btn btn-xs btn-primary btnAction btnAction-details" title="Add Guest Stay" href="#/new-reservation/11"> <i class="glyphicon glyphicon-fw glyphicon-bed"></i> </a> <a class="btn btn-xs btn-warning btnAction" title="Delete" data-id="11"> <i class="glyphicon glyphicon-fw glyphicon-trash"></i> </a></td>
+                        </tr>
+                    <tr role="row" class="even">
+                          <td class="text-center valign-middle sorting_1"><div class="text-left"><span title="7242">0000015</span></div></td>
+                          <td class=" text-center valign-middle">Huel Lola <span style="color:#049372"><i style="font-size:70%" class="glyphicon glyphicon-plus"></i></span></td>
+                          <td class=" text-center valign-middle">07-May-1979</td>
+                          <td class=" text-center valign-middle"><div class="valign-middle">26</div></td>
+                          <td class=" text-center valign-middle">Lennaborough</td>
+                          <td class=" text-center valign-middle">Bonaire</td>
+                          <td class=" text-center valign-middle">1</td>
+                          <td class=" text-center valign-middle">18-Jun-2018</td>
+                          <td class=" text-center valign-middle"><div class="text-right">3,648,400</div></td>
+                          <td class=" text-center valign-middle"><div class="text-left"><a href="mailto:Lola_Huel75@gustodian.com">Lola_Huel75@gustodian.com</a></div></td>
+                          <td class=" text-center valign-middle"><a class="btn btn-xs btn-info btnAction" title="Details" href="#/edit/15"> <i class="glyphicon glyphicon-fw glyphicon-pencil"></i> </a> <a class="btn btn-xs btn-primary btnAction btnAction-details" title="Add Guest Stay" href="#/new-reservation/15"> <i class="glyphicon glyphicon-fw glyphicon-bed"></i> </a> <a class="btn btn-xs btn-warning btnAction" title="Delete" data-id="15"> <i class="glyphicon glyphicon-fw glyphicon-trash"></i> </a></td>
+                        </tr>
+                  </tbody>
+                    </table>
+                <div class="bottom">
+                      <div class="pull-left">
+                    <div class="dataTables_length" id="guestProfileListDataTable_length">
+                          <label>Show
+                        <select name="guestProfileListDataTable_length" aria-controls="guestProfileListDataTable" class="form-control input-sm">
+                              <option value="10">10</option>
+                              <option value="25">25</option>
+                              <option value="50">50</option>
+                              <option value="100">100</option>
+                            </select>
+                        entries</label>
+                        </div>
+                  </div>
+                      <div class="pull-right">
+                    <div class="dataTables_paginate paging_simple_numbers" id="guestProfileListDataTable_paginate">
+                          <ul class="pagination">
+                        <li class="paginate_button previous disabled" id="guestProfileListDataTable_previous"><a href="#" aria-controls="guestProfileListDataTable" data-dt-idx="0" tabindex="0">Previous</a></li>
+                        <li class="paginate_button active"><a href="#" aria-controls="guestProfileListDataTable" data-dt-idx="1" tabindex="0">1</a></li>
+                        <li class="paginate_button "><a href="#" aria-controls="guestProfileListDataTable" data-dt-idx="2" tabindex="0">2</a></li>
+                        <li class="paginate_button "><a href="#" aria-controls="guestProfileListDataTable" data-dt-idx="3" tabindex="0">3</a></li>
+                        <li class="paginate_button "><a href="#" aria-controls="guestProfileListDataTable" data-dt-idx="4" tabindex="0">4</a></li>
+                        <li class="paginate_button "><a href="#" aria-controls="guestProfileListDataTable" data-dt-idx="5" tabindex="0">5</a></li>
+                        <li class="paginate_button disabled" id="guestProfileListDataTable_ellipsis"><a href="#" aria-controls="guestProfileListDataTable" data-dt-idx="6" tabindex="0">…</a></li>
+                        <li class="paginate_button "><a href="#" aria-controls="guestProfileListDataTable" data-dt-idx="7" tabindex="0">131</a></li>
+                        <li class="paginate_button next" id="guestProfileListDataTable_next"><a href="#" aria-controls="guestProfileListDataTable" data-dt-idx="8" tabindex="0">Next</a></li>
+                      </ul>
+                        </div>
+                  </div>
+                      <div class="crm-table-clear"></div>
+                    </div>
+              </div>
+                </div>
+            <br>
+            <span style="color: rgb(4, 147, 114);"><i class="glyphicon glyphicon-plus" style="font-size: 70%;"></i></span><!-- react-text: 42 --> Sync'ed from GUSTO FOS<!-- /react-text --></div>
+            </div>
+      </div>
+        </div>
+  </div>
+      <div id="footer">
+    <div class="pull-left" style="line-height: 27px;"> <span style="font-weight: bold;">Powered by</span> <img src="/api/Attachment/getTenantImage?name=gusto-logo-footer.png" alt="" style="height: 30px; width: auto;" class="m-left-5"> </div>
+    <div class="pull-right" style="line-height: 27px;"> Copyright © 2018 <span class="gusto-copyright-text">gusto</span>dian | v 1.5.0.2 </div>
+  </div>
+    </div>
+<script>
+        window.addEventListener('click', function (e) {
+            if (e.target.id == 'btn_profileMenu') {
+                // Clicked in box
+                $("#dd_profileMenu").slideToggle("slow");
+            }
+            else {
+                // Clicked outside the box
+                if (!document.getElementById('dd_profileMenu').contains(e.target)) {
+                    $("#dd_profileMenu").slideUp();
+                }
+            }
+        });
+
+        function getToken() {
+            window.open('/Request/GetTokenAsync');
+        }
+    </script>
+</body>
+</html>

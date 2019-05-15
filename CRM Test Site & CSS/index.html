@@ -1,0 +1,463 @@
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Gusto CRM System | Glasgow Hotel</title>
+
+    <meta name="smartaddon-verification" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link href="/api/Attachment/getTenantImage?name=favicon.ico" rel="shortcut icon">
+    <link href="/api/Attachment/getTenantImage?name=favicon.ico" rel="bookmark">
+
+    <!-- Load Library -->
+    <link rel="stylesheet" href="/crm_dist/css/site.min.css?v=1PldsPjXmYjMbKz0G9RK39KDjBzeUM4wCYJkdjzBZ3o" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowreorder/1.2.5/css/rowReorder.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/site.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>(window.jQuery||document.write("\u003Cscript src=\u0022\/src\/lib\/jquery\/dist\/jquery.js\u0022\u003E\u003C\/script\u003E"));</script>
+
+    <script src="/crm_dist/js/site.lib.min.js?v=LjlSFNlHAayWHV07RLIWtbjRun-fzFQmL9spGSAnJ60"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script>(window.moment||document.write("\u003Cscript src=\u0022\/src\/lib\/moment\/moment.min.js\u0022\u003E\u003C\/script\u003E"));</script>
+    <script src="/lib/tinymce/js/tinymce/tinymce.min.js"></script>
+    <script src="https://cdn.datatables.net/rowreorder/1.2.5/js/dataTables.rowReorder.min.js"></script>
+
+    <script>
+        window.onpageshow = function (event) {
+            if (event.persisted) {
+                window.location.reload()
+            }
+        };
+
+        var data = '""';
+        if ('{"OutletCode":"GLASGOW","OutletName":"Glasgow Hotel","Address":"","Phone":"","Email":"","Website":"","OutletLogo":"download.png","LoginBackground":"login-bg-default.jpg","AppHeaderBackground":"app-header-bg-default.jpg","AppMainBackground":"app-main-bg-default.jpg","OutletTimezone":"Asia/Singapore","TimezoneValue":null,"OutletManagerSign":"manager-sign-default.png","GmName":"","ArrValue":1000000.0,"BirthdaySendTime":"08:00 AM","PostStaySendTime":"08:00 AM","CampaignSenderName":"Glasgow Hotel","CampaignSenderEmail":"ricky.pham@gustodian.com","CurrencySymbol":"Rp","FileOutletLogo":null,"FileLoginBg":null,"FileAppHeaderBg":null,"FileAppMainBg":null,"FileOutletManagerSign":null}' != '') {
+            data = '{"OutletCode":"GLASGOW","OutletName":"Glasgow Hotel","Address":"","Phone":"","Email":"","Website":"","OutletLogo":"download.png","LoginBackground":"login-bg-default.jpg","AppHeaderBackground":"app-header-bg-default.jpg","AppMainBackground":"app-main-bg-default.jpg","OutletTimezone":"Asia/Singapore","TimezoneValue":null,"OutletManagerSign":"manager-sign-default.png","GmName":"","ArrValue":1000000.0,"BirthdaySendTime":"08:00 AM","PostStaySendTime":"08:00 AM","CampaignSenderName":"Glasgow Hotel","CampaignSenderEmail":"ricky.pham@gustodian.com","CurrencySymbol":"Rp","FileOutletLogo":null,"FileLoginBg":null,"FileAppHeaderBg":null,"FileAppMainBg":null,"FileOutletManagerSign":null}';
+        }
+        var config = JSON.parse(data);
+
+        window.crmGlobalConfiguration = config;
+
+
+        var userClaimsRaw = '""';
+        if ('[{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier","Value":"16d903ae-87b7-4c3b-803c-fcc09ca2926e"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name","Value":"glasgow.uog"},{"Type":"AspNet.Identity.SecurityStamp","Value":"0fbe7e2b-9d7e-4b2c-97bf-025685f18bbd"},{"Type":"http://schemas.microsoft.com/ws/2008/06/identity/claims/role","Value":"Super User"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_GUEST_PROFILES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_GUEST_PROFILES:@_VIEW_GUEST_PROFILES_LIST"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_GUEST_PROFILES:@_CREATE_GUEST_PROFILES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_GUEST_PROFILES:@_MERGE_GUEST_PROFILES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_IMPORT_EXPORT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_IMPORT_EXPORT:@_IMPORT_GUEST_PROFILES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_IMPORT_EXPORT:@_IMPORT_GUEST_STAY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_IMPORT_EXPORT:@_EXPORT_GUEST_PROFILES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_IMPORT_EXPORT:@_EXPORT_GUEST_STAY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_EMAIL_MARKETING_MGNT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_EMAIL_MARKETING_MGNT:@_VIEW_CAMPAIGNS"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_EMAIL_MARKETING_MGNT:@_CREATE_NEW_CAMPAIGN"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_EMAIL_MARKETING_MGNT:@_POST_STAY_CONFIG"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_EMAIL_MARKETING_MGNT:@_BIRTHDAY_CONFIG"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_TEMPLATE_MGNT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_TEMPLATE_MGNT:@_MANAGE_TEMPLATES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_TEMPLATE_MGNT:@_CREATE_NEW_TEMPLATE"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_MARKETING_CAMPAIGN"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_MARKETING_CAMPAIGN:@_CAMPAIGN_DETAILS_REPORT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_MARKETING_CAMPAIGN:@_POST_STAY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_MARKETING_CAMPAIGN:@_BIRTHDAY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_GUEST_PROFILE"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_GUEST_PROFILE:@_GUEST_PROFILE_LIST"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_USAGE"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_USAGE:@_EMAIL_USAGE"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_ACTIVE_REPORT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_ACTIVE_REPORT:@_ACTIVE_REPORT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_SURVEY_REPORT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_SURVEY_REPORT:@_POST_STAY_SURVEY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CONFIGURATION"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CONFIGURATION:@_SYSTEM_CONFIGURATION"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CONFIGURATION:@_EMAIL_QUOTA_VIEW"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CONFIGURATION:@_UPLOAD_FILE_TEMPLATES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_USER_USER_GROUP_MNGT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_USER_USER_GROUP_MNGT:@_MANAGE_USERS"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_USER_USER_GROUP_MNGT:@_MANAGE_USER_GROUPS"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_BLACKLIST_MNGT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_BLACKLIST_MNGT:@_MANAGE_BLACKLIST"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CAMPAIGN_MNGT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CAMPAIGN_MNGT:@_MANAGE_CAMPAIGNS"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CAMPAIGN_ARCHIVE"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CAMPAIGN_ARCHIVE:@_ARCHIVED_CAMPAIGNS"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_SURVEY_MNGT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_SURVEY_MNGT:@_MANAGE_CATEGORY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_SURVEY_MNGT:@_MANAGE_INTRO"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_SURVEY_MNGT:@_PREVIEW_SURVEY"}]' != '') {
+            userClaimsRaw = '[{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier","Value":"16d903ae-87b7-4c3b-803c-fcc09ca2926e"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name","Value":"glasgow.uog"},{"Type":"AspNet.Identity.SecurityStamp","Value":"0fbe7e2b-9d7e-4b2c-97bf-025685f18bbd"},{"Type":"http://schemas.microsoft.com/ws/2008/06/identity/claims/role","Value":"Super User"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_GUEST_PROFILES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_GUEST_PROFILES:@_VIEW_GUEST_PROFILES_LIST"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_GUEST_PROFILES:@_CREATE_GUEST_PROFILES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_GUEST_PROFILES:@_MERGE_GUEST_PROFILES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_IMPORT_EXPORT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_IMPORT_EXPORT:@_IMPORT_GUEST_PROFILES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_IMPORT_EXPORT:@_IMPORT_GUEST_STAY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_IMPORT_EXPORT:@_EXPORT_GUEST_PROFILES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_GuestProfiles:@_IMPORT_EXPORT:@_EXPORT_GUEST_STAY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_EMAIL_MARKETING_MGNT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_EMAIL_MARKETING_MGNT:@_VIEW_CAMPAIGNS"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_EMAIL_MARKETING_MGNT:@_CREATE_NEW_CAMPAIGN"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_EMAIL_MARKETING_MGNT:@_POST_STAY_CONFIG"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_EMAIL_MARKETING_MGNT:@_BIRTHDAY_CONFIG"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_TEMPLATE_MGNT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_TEMPLATE_MGNT:@_MANAGE_TEMPLATES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_EmailMarketing:@_TEMPLATE_MGNT:@_CREATE_NEW_TEMPLATE"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_MARKETING_CAMPAIGN"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_MARKETING_CAMPAIGN:@_CAMPAIGN_DETAILS_REPORT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_MARKETING_CAMPAIGN:@_POST_STAY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_MARKETING_CAMPAIGN:@_BIRTHDAY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_GUEST_PROFILE"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_GUEST_PROFILE:@_GUEST_PROFILE_LIST"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_USAGE"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_EMAIL_USAGE:@_EMAIL_USAGE"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_ACTIVE_REPORT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_ACTIVE_REPORT:@_ACTIVE_REPORT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_SURVEY_REPORT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Report:@_SURVEY_REPORT:@_POST_STAY_SURVEY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CONFIGURATION"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CONFIGURATION:@_SYSTEM_CONFIGURATION"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CONFIGURATION:@_EMAIL_QUOTA_VIEW"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CONFIGURATION:@_UPLOAD_FILE_TEMPLATES"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_USER_USER_GROUP_MNGT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_USER_USER_GROUP_MNGT:@_MANAGE_USERS"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_USER_USER_GROUP_MNGT:@_MANAGE_USER_GROUPS"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_BLACKLIST_MNGT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_BLACKLIST_MNGT:@_MANAGE_BLACKLIST"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CAMPAIGN_MNGT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CAMPAIGN_MNGT:@_MANAGE_CAMPAIGNS"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CAMPAIGN_ARCHIVE"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_CAMPAIGN_ARCHIVE:@_ARCHIVED_CAMPAIGNS"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_SURVEY_MNGT"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_SURVEY_MNGT:@_MANAGE_CATEGORY"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_SURVEY_MNGT:@_MANAGE_INTRO"},{"Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authorizationdecision","Value":"!_Administration:@_SURVEY_MNGT:@_PREVIEW_SURVEY"}]';
+        }
+        var userClaims = JSON.parse(userClaimsRaw);
+
+        window.crmUserClaims = userClaims;
+        window.crmUserID = '16d903ae-87b7-4c3b-803c-fcc09ca2926e';
+        window.crmUserCreatedBy = '-1';
+        window.crmUserCreatedDateTime = '10/24/2018 7:18:08 AM';
+        window.crmUserLockoutEnabled = 'True';
+
+        window.isExpired = '';
+        if (window.isExpired == 'Expired') {
+            window.location.href = '/Admin/List/#/UserExpiry/' + window.crmUserID;
+        }
+    </script>
+
+</head>
+<body>
+    <div id="page" class="container">
+        <!-- HEADER -->
+        <div id="header">
+            <div id="topbar" class="clearfix row">
+                <div id="topbar-left">
+                    <div id="logo-panel">
+                        <a href="/"><img src="/api/Attachment/getLogoImage" style="max-height: 110px;"></a>
+                    </div>
+                </div>
+
+
+                <div id="topbar-right" style="background-image: url('/api/Attachment/getTenantImage?name=trans-white-75.png')">
+                    <div id="brand-logo-placeholder">
+                        <img src="/api/Attachment/getTenantImage?name=logo-crm.png">
+                    </div>
+                    <div id="outlet-date-placeholder">
+                        <span id="outlet-date-day" title="Wednesday, 31 October 2018">31</span>
+                        <span id="outlet-date-month">Oct</span>
+                    </div>
+                    <div class="dropdown">
+                        <a id="outlet-name-placeholder" class="dropdown-toggle">
+                            <span id="outlet-name">Glasgow Hotel</span>
+                        </a>
+
+                        <a onclick="getToken()" href="#" style="margin-left:10px">
+                            <i class="fa fa-question-circle" aria-hidden="true" style="font-size:16px"></i>
+                        </a>
+
+                    </div>
+                    <div id="user-header">
+                        <button id="btn_profileMenu" class="btn btn-link">
+                            Glasgow Demo
+
+                            <i class="fa fa-fw fa-caret-down"></i>
+                        </button>
+                        <div id="dd_profileMenu">
+                            <img src="/api/Attachment/getTenantImage?name=default_profile.png" class="img-thumbnail" style="width: 100px;">
+                            <span>Glasgow Demo</span>
+                            <span></span>
+                            <br>
+
+
+                            <hr>
+                            <a class="btn btn-success btn-block" href="/Me">My Profile</a>
+
+                            <a onclick="localStorage.clear();" class="btn btn-success btn-block" href="/Account/Logout">Log Out</a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="newsTicker-placeholder" class="row">
+                <ul id="newsTicker" class="col-xs-12 newsticker hidden"></ul>
+            </div>
+            <div class="row">
+                <div id="gusto-navbar" class="navbar yamm">
+                    <ul class="nav nav-justified" id="myNav">
+
+                            <li class="dropdown yamm-fw">
+                                <a href="javascript:void(0)" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false">
+                                    &nbsp;
+                                    Guest Profiles<b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="grid-content">
+                                        <div class="menu row">
+                                                                                                <div class="col-menu menu-group">
+                                                        <div class="nav-group">
+                                                            <span class="nav-subhead">Guest Profiles</span>
+                                                            <ul class="fa-ul">
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Guest/List/#/">View Guest Profiles List</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Guest/List/#/create-new">Create New Guest Profile</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Guest/List/#/merge">Merge Guests</a>
+                                                                        </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-menu menu-group">
+                                                        <div class="nav-group">
+                                                            <span class="nav-subhead">Import / Export</span>
+                                                            <ul class="fa-ul">
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Data/#/import-guest">Import Guest Profiles</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Data/#/import-stay">Import Guest Stay</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Data/#/export-guest">Export Guest Profiles</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Data/#/export-stay">Export Guest Stay</a>
+                                                                        </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown yamm-fw">
+                                <a href="javascript:void(0)" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false">
+                                    &nbsp;
+                                    Email Marketing<b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="grid-content">
+                                        <div class="menu row">
+                                                                                                <div class="col-menu menu-group">
+                                                        <div class="nav-group">
+                                                            <span class="nav-subhead">Email Marketing Management</span>
+                                                            <ul class="fa-ul">
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Campaign/List/#/">View Campaigns</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Campaign/List/#/create">New Campaign</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Campaign/List/#/post-stay">Post-Stay Configuration</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Campaign/Birthday">Birthday Configuration</a>
+                                                                        </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-menu menu-group">
+                                                        <div class="nav-group">
+                                                            <span class="nav-subhead">Template Management</span>
+                                                            <ul class="fa-ul">
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Template/List#/">Manage Templates</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Template/List/#/create-new">Create New Template</a>
+                                                                        </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown yamm-fw">
+                                <a href="javascript:void(0)" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false">
+                                    &nbsp;
+                                    Report<b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="grid-content">
+                                        <div class="menu row">
+                                                                                                <div class="col-menu menu-group">
+                                                        <div class="nav-group">
+                                                            <span class="nav-subhead">Email Marketing Campaign</span>
+                                                            <ul class="fa-ul">
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Report/#/campaignmonthlyreport">Campaign Details Report</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Report/#/poststayreport">Post-Stay Report</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Report/#/birthdayreport">Birthday Report</a>
+                                                                        </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-menu menu-group">
+                                                        <div class="nav-group">
+                                                            <span class="nav-subhead">Guest Profile</span>
+                                                            <ul class="fa-ul">
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Guest/List/#/report">Guest Profile Report</a>
+                                                                        </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-menu menu-group">
+                                                        <div class="nav-group">
+                                                            <span class="nav-subhead">Email Usage</span>
+                                                            <ul class="fa-ul">
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Report/#/emailusagemonthlyreport">Email Usage Report</a>
+                                                                        </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-menu menu-group">
+                                                        <div class="nav-group">
+                                                            <span class="nav-subhead">Status Report</span>
+                                                            <ul class="fa-ul">
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Report/#/statusreport">Status Report</a>
+                                                                        </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-menu menu-group">
+                                                        <div class="nav-group">
+                                                            <span class="nav-subhead">Survey Report</span>
+                                                            <ul class="fa-ul">
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Report/#/surveyreport">Post-Stay Survey Report</a>
+                                                                        </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown yamm-fw">
+                                <a href="javascript:void(0)" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false">
+                                    &nbsp;
+                                    Administration<b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="grid-content">
+                                        <div class="menu row">
+                                                                                                <div class="col-menu menu-group">
+                                                        <div class="nav-group">
+                                                            <span class="nav-subhead">Configuration</span>
+                                                            <ul class="fa-ul">
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Admin/List/#/">System Configuration</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Admin/List/#/quota">Email Quota</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Admin/List/#/uploadfiletemplates">Upload File Formats</a>
+                                                                        </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-menu menu-group">
+                                                        <div class="nav-group">
+                                                            <span class="nav-subhead">User &amp; User Group Management</span>
+                                                            <ul class="fa-ul">
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Admin/List/#/usermanage">Manage Users</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Admin/List/#/usergroupmanage">Manage User Groups</a>
+                                                                        </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-menu menu-group">
+                                                        <div class="nav-group">
+                                                            <span class="nav-subhead">Blacklist Management</span>
+                                                            <ul class="fa-ul">
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Admin/List/#/blacklistmanage">Manage Blacklist</a>
+                                                                        </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-menu menu-group">
+                                                        <div class="nav-group">
+                                                            <span class="nav-subhead">Campaign Archive</span>
+                                                            <ul class="fa-ul">
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Admin/List/#/campaignsarchive">Archived Campaigns</a>
+                                                                        </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-menu menu-group">
+                                                        <div class="nav-group">
+                                                            <span class="nav-subhead">Survey Management</span>
+                                                            <ul class="fa-ul">
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Admin/List/#/surveycategorymanage">Comment Form Setup</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Admin/List/#/surveyintromanage">Introduction Message</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa-li fa fa-caret-right"></i>
+                                                                            <a href="/Admin/List/#/surveypreview">Preview Comment Form</a>
+                                                                        </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div> <!-- e.o HEADER-->
+        <!-- CONTENT -->
+        <div id="main-container" class="row">
+            
+
+<style>
+    #printOnly {
+        display: none;
+    }
+
+    @media print {
+        #printOnly {
+            display: block;
+        }
+
+        .bottom {
+            display: none !important;
+        }
+    }
+</style>
+
+<div id="container">
+</div>
+
+
+<script src="/crm_dist/js/commons.chunk.bundle.js?v=xUII960vFsQmqM78DMaqLVj3E1RfN9dvCfmeaiQe6iA"></script>
+<script src="/crm_dist/js/guestProfiles.bundle.js?v=Ru1pc8HtIPwHY7BywMUj-d0R-hdXFDMC98tWgFNHWkw"></script>
+
+
+        </div>
+        <div id="footer">
+            <div class="pull-left" style="line-height: 27px;">
+                <span style="font-weight: bold;">Powered by</span> <img src="/api/Attachment/getTenantImage?name=gusto-logo-footer.png" alt="" style="height: 30px; width: auto;" class="m-left-5">
+            </div>
+            <div class="pull-right" style="line-height: 27px;">
+                Copyright © 2018 <span class="gusto-copyright-text">gusto</span>dian | v 1.5.0.2
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        window.addEventListener('click', function (e) {
+            if (e.target.id == 'btn_profileMenu') {
+                // Clicked in box
+                $("#dd_profileMenu").slideToggle("slow");
+            }
+            else {
+                // Clicked outside the box
+                if (!document.getElementById('dd_profileMenu').contains(e.target)) {
+                    $("#dd_profileMenu").slideUp();
+                }
+            }
+        });
+
+        function getToken() {
+            window.open('/Request/GetTokenAsync');
+        }
+    </script>
+
+
+</body>
+</html>
