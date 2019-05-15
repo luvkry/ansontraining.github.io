@@ -1,5 +1,0 @@
-URL:
-http://glasgow.demo.crm.gustodian.com
-
-username: glasgow.uog
-password: p@ssw0rd
